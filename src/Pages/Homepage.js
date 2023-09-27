@@ -78,7 +78,7 @@ const Homepage = (history ) => {
           return item.toString().includes(searchTerm);
         },
       {/*  const filteredResults = uploadedFiles.filter((file) => {
-          // Perform the search logic here based on the file data
+          // Perform the search logic here based on the file name 
           // For example, if the file has a name property, you can search based on the name
           return file.name.includes(searchTerm);
         */} 
