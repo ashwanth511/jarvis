@@ -1,0 +1,300 @@
+:root {
+  --main-radius: 5px;
+  --main-padding: 5px;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+.template_container {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 0.2fr 1.3fr 1.2fr 1.5fr;
+  grid-template-areas:
+    "template_nav template_nav template_nav template_nav"
+    "template_sidebar template_main template_main template_main"
+    "template_sidebar template_content1 template_content1 template_content1"
+    "template_sidebar template_footer template_footer template_footer";
+  grid-gap: 1%;
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 12px;
+  background-color: #0B0D0F;
+  text-align: center;
+}
+ 
+
+#template_nav {
+  height: 100px;
+  font-family:Arial;
+  grid-area: template_nav;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+  /* border: 1px solid rgb(189, 96, 158); */
+  display: flex;
+  flex-direction: row;
+  border: 1px solid rgba(34, 34, 34, 0.30);
+  background: #131516;
+  grid-template-columns: auto;
+  grid-template-columns: repeat(5, 1fr);
+  right: 4%; 
+}
+#template_nav .template_notification {
+  position: absolute;
+  top: 0;  
+  right: 0; 
+  align-items: center;
+ 
+  margin-top: 1%;
+  margin-right: 1%;
+  
+  background: #101213;  
+}
+
+
+#template_main {
+  background :#0b0f0d;
+    grid-area: template_main;
+    width: 100%;
+    height: 100%;
+    padding-top: var(--main-padding);
+    color: white;
+    display: flex;
+    flex-direction: row;
+    padding: 0.1%; 
+    font-family:Arial;
+    border-radius: 0.5%;
+    
+  gap: 20px;
+    font-style: calc();
+    position: relative; 
+   right: 4%;
+}
+
+#template_sidebar {
+  font-family:Arial;
+  background: #0B0D0F;
+  grid-area: template_sidebar;
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+  text-transform: capitalize;
+  flex-wrap: wrap;
+  width: 90%;
+  flex-shrink: 0;
+}
+#template_sidebar .template_license{
+  width: 10.625rem;
+  height: 10.5rem;
+  bottom: 6.6%;
+  margin-left: 1.19rem;
+  margin-bottom: 2rem;
+  color: #A8A8A8;
+  position: absolute;
+  border-bottom: 1px solid #343434;
+  background: #17191A;
+  box-shadow: 0px 4px 50px 0px rgba(0, 0, 0, 0.02); 
+}
+#template_sidebar .template_btnborder{
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 36%;
+  font-family:Arial;
+  margin-left: 32px;
+ 
+}
+#template_sidebar .template_btns{
+  display: flex;
+  font-family:Arial;
+  align-items: center;
+  justify-content: flex-start;
+  border-radius: 4px;
+  width: 162px;
+  height: 34px;
+ 
+}
+#template_sidebar .template_license{
+  width: 10.625rem;
+  height: 10.5rem;
+  bottom: 6.6%;
+  margin-left: 1.19rem;
+  margin-bottom: 2rem;
+  color: #A8A8A8;
+  position: absolute;
+  border-bottom: 1px solid #343434;
+  background: #17191A;
+  box-shadow: 0px 4px 50px 0px rgba(0, 0, 0, 0.02);
+  
+}
+
+
+#template_content1 {
+  background: #17191A;
+  display: flex;
+  flex-direction: row;
+  font-family:Arial;
+  justify-content: center;
+  margin-top: 0%;
+  font-family:Arial;
+  align-items: center;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+  position: relative;
+  grid-area: template_content1;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+   padding: 1px; 
+  right: 4%;
+  width: 100%;
+  height: 100%;
+}
+#template_content1 .template_content1btn{
+  display: block;
+  position: absolute;
+  color: skyblue;
+  bottom: 1%;
+  font-family:Arial;
+  right: 45%;
+ 
+  white-Space: nowrap; 
+}
+#template_content1 .template_newtemp{
+  display: block;
+  position: absolute;
+top: 10%;
+right: 2%;
+}
+#template_content1 .template_suggestedtemplate{
+ 
+  display: block;
+  position: absolute;
+  top: 10%;
+  font-family:Arial;
+  font-size: 150%;
+  left: 3%;
+
+  color: #FFF;
+font-feature-settings: 'clig' off, 'liga' off;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+  white-Space: nowrap; 
+}
+ 
+
+ 
+#template_footer {
+  background:#17191A;
+  display: flex;
+  color: #ffffff;
+  right: 1.25rem;
+  font-family:Arial;
+  /* overflow: scroll; */
+  overflow-y:scroll;
+  flex-direction: row;
+  grid-area: template_footer;
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+  position: relative;
+  width: 100%;
+  height: 98%;
+ margin-top: 0;
+ gap: 1.5625rem;
+  right: 4%;
+  transition: all 0.3s ease; 
+}
+#template_footer .template_folderboxview{
+  background-color:#242627 ;
+  padding: 0.9375rem 1.375rem 1.375rem 1.375rem;
+  
+  width: 20%;
+   
+  margin-left: 2%;
+   
+  width: 15.6875rem;
+  height: 41%;
+  padding: 0.9375rem 1.375rem 1.375rem 1.375rem;
+   
+   
+  gap: 1.5625rem;
+   
+  }
+   
+  #template_footer .template_foldername{
+    color: #FFF;
+    font-feature-settings: 'clig' off, 'liga' off;
+   
+    font-size:150%;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1%;
+   
+   
+  }
+   
+  #template_footer .template_foldericon{
+    padding:0.1%;
+    width: 111%;
+    height: 111%;
+   margin-left: -5%;
+    
+  }
+  #template_footer .template_foderview{
+    position: absolute;
+    bottom:0%;
+    right: 45%;
+    color: skyblue;
+    white-Space: nowrap; 
+  }
+  #template_footer .template_newfolder{
+    top: 3%;
+    right: 1%;
+    position: absolute;
+  }
+  #template_footer .template_suggestedfolder{
+   
+    top: 0%;
+    left: 2%;
+    position: absolute;
+  
+    color: #FFF;
+    font-feature-settings: 'clig' off, 'liga' off;
+    
+    font-size: 150%;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    white-Space: nowrap; 
+  }
+   
+  
+
+a {
+  text-align: center;
+  display: block;
+  font-family: inherit;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 1rem;
+}
+
+@media only screen and (max-width: 550px) {
+  .template_container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.4fr 0.4fr 2.2fr 1.2fr 1.2fr 1.2fr 1fr;
+    grid-template-areas:
+      "template_nav"
+      "template_sidebar"
+      "template_main"
+      "template_content1"
+      "template_content2"
+      "template_content3"
+      "template_footer";
+  }
+}

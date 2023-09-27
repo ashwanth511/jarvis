@@ -1,0 +1,260 @@
+:root {
+    --main-radius: 5px;
+    --main-padding: 5px;
+  }
+  
+  body {
+    font-family: "Inter", sans-serif;
+  }
+  .dlink {
+    text-decoration: none !important;
+    color: #03a9f3 !important;
+  }
+  
+  .data-table-extensions-filter {
+ 
+    border-radius: 50px;
+    padding: 3px 5px;
+    width: 70%;
+  }
+  
+  .first {
+    padding-right: 10px !important;
+  }
+  
+  .filter-text {
+    border: none !important;
+    width: 80%;
+  }
+  
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+      monospace;
+  }
+
+  
+  .folderlist_container {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 0.5fr 1fr 1fr 1fr;
+    grid-template-rows: 0.4fr 0.2fr 2fr 0fr 0fr;
+    background-color: #0B0D0F;
+    grid-template-areas:
+      "folderlist_nav folderlist_nav folderlist_nav folderlist_nav folderlist_nav"
+      "folderlist_sidebar folderlist_main folderlist_main folderlist_main folderlist_main "
+      "folderlist_sidebar folderlist_content1 folderlist_content1 folderlist_content1 folderlist_content1"
+      "folderlist_sidebar folderlist_content1 folderlist_content1 folderlist_content1 folderlist_content1"
+      "folderlist_sidebar  folderlist_content1 folderlist_content1 folderlist_content1 folderlist_content1";
+     
+    font-weight: 800;
+    text-transform: capitalize;
+    font-size: 12px;
+    color: #004d40;
+    text-align: center;
+  }
+  
+  #folderlist_nav {
+    height: 100%;
+    width: 100%;
+    grid-area: folderlist_nav;
+    background-color: #1d1d1d;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+    display: flex;
+    flex-direction: row;
+    grid-template-columns: auto;
+    grid-template-columns: repeat(5, 1fr);
+    right: 4%; 
+  }
+  /* .folderlist_nav:first-child{
+  grid-row: 1/1;
+  grid-column: 1 / 1;
+  }
+  .folderlist_nav > *:nth-child(2) {
+  grid-row: 1;
+  grid-column: 5;  
+  justify-self: center;  
+  } */
+  #folderlist_notification {
+  position: absolute;
+  top: 0;  
+  right: 0; 
+  width: 1fr;
+  height: 1fr;
+  padding: 1fr 1fr;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 2.6rem;
+ 
+  background: #101213;
+  gap: 1px;
+  }
+  .buttons{
+    top: 1%;
+   margin-left: -30%;
+    right: 0%;
+  }
+  #folderlist_main {
+    background: #101213;
+    grid-area: folderlist_main;
+   
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-style: calc();
+    position: relative; 
+    right: 8%; 
+    
+  }
+  
+  #folderlist_sidebar {
+    background: #0B0D0F;
+      grid-area: folderlist_sidebar;
+      display: flex;
+      flex-direction: column;
+      border-radius: var(--main-radius);
+      padding-top: var(--main-padding);
+      text-transform: capitalize;
+      flex-wrap: wrap;
+      width:60%;
+      height: 100;
+  }
+  
+  #folderlist_content1 {
+    background: #252525;
+    gap: 2%;
+    grid-area: folderlist_content1;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+    position: relative; 
+    right: 8%; 
+  }
+  #folderlist_content1 > :first-child {
+    margin-right: 1px; 
+  }
+  #folderlist_content1 .pagination {
+    background-color: #0B0D0F;
+    color:wheat;
+    /* Add any other styling you need */
+  }
+  a {
+    text-align: center;
+    display: block;
+    font-family: inherit;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 1rem;
+  }
+  
+  
+  @media only screen and (max-width: 700px) {
+    .folderlist_container {
+      grid-template-rows: 0.4fr 0.4fr 2.2fr 1.2fr 1.2fr 1.2fr 1fr;
+    
+    grid-template-areas:
+    "folderlist_nav folderlist_nav"
+    "folderlist_sidebar folderlist_sidebar "
+    "folderlist_sidebar folderlist_main"
+    "content1 content1"
+    "folderlist_content1 folderlist_content1"
+    "folderlist_content1 folderlist_content1";
+}
+    #folderlist_content1,
+    folderlist_footer {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  
+  @media only screen  and (max-height: 500px) {
+  .container {
+    grid-template-rows: 0.4fr ;
+  }
+  #folderlist_content1,
+  footer {
+    flex-direction: row;
+    align-items: center;
+  }
+  }
+  
+  
+  @media only screen and (max-width: 550px) {
+    .folderlist_container {
+      grid-template-columns: 1fr;
+      grid-template-rows: 0.4fr 0.4fr 2.2fr 1.2fr 1.2fr 1.2fr 1fr;
+      grid-template-areas:
+        "folderlist_nav"
+        "folderlist_main"
+        "folderlist_sidebar"
+        "folderlist_content1"
+        "folderlist_content1"
+        "folderlist_content1"
+        "folderlist_content1";
+    }
+    #folderlist_content1,folderlist_footer {
+      flex-direction: column;
+      align-items: center;
+      
+  }
+  
+  }
+  .folderlist_uploadpdf {
+    color: #ffffff;
+  
+  
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: flex;
+   
+    align-items: center;
+    flex-direction: column;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+    position: relative; 
+  
+  }
+  .folderlist_uploadpdf > * {
+    border: 1px solid #141414;  
+    margin: 1px;  
+    width: 200px;
+  }
+  .folderlist_loadingprocess {
+    color: #050505;
+    
+  width:85%;
+  align-items: center;
+    flex-direction: column;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+    position: relative; 
+ 
+  grid-area: folderlist_main;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  
+  
+  
+  }
+  
+  .folderlist_loadpopuppage {
+  background-color: rgba(0, 0, 0, 0.8);  
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  }
+  .folderlist_recentsort {
+    display: flex;
+  height: 34px;
+  padding: 5px 12px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1px;
+  }
